@@ -6,6 +6,9 @@ coil_df = read.csv('Suspension_Coil.csv', header = T, sep = ',')
 total_summary = coil_df %>% summarize(mean = mean(PSI), median = median(PSI), variance = var(PSI), sd = sd(PSI))
 lot_summary = coil_df %>% group_by(Manufacturing_Lot) %>% summarize(mean = mean(PSI), median = median(PSI), variance = var(PSI), sd = sd(PSI)) 
 
+
+#t-test population v. expected
+t.test(coil_df['PSI'], mu = 1500)
 ##Based on http://cran.nexr.com/doc/contrib/Lemon-kickstart/kr_ttest.html
 #t-test Lot1/population
 t.test(subset(coil_df$PSI, coil_df$Manufacturing_Lot == 'Lot1'), mu = 1500)
