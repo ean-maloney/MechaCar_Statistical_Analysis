@@ -91,4 +91,17 @@ Based on the results of the T-test on the entire population of coils, because th
 Because the p-values for the T-tests on Lot1 and Lot2 are greater than 0.05, we cannot show that the mean psi for coils in these lots is significantly different from the predicted mean of 1500 psi. However, because the p-value for Lot3 is less than 0.05, we can assert that the mean psi from this lot is significantly different than 1500 psi. 
 
 ## Study Design: MechaCar vs. Competition
+To determine the performance of MechaCar versus leading competitors, I suggest that the following metrics be evaluated: fuel efficiency, maintenance cost, and resale value (adjusted for age and mileage of car). 
+
+The data we should use for this test should be gathered from a sample of MechaCars and the reported metrics for competitor vehicles.
+
+Our hypotheses will be the following where X represents the population mean for any of the above metrics (reversing the order of variables for maintenance cost):
+
+H_0: X_mechacar - X_competitor <= 0
+
+H_a: X_mechacar - X_competitor > 0.
+
+For each competitor and each metric, we would perform a one-sided T-test to determine if there is a statistically significant difference between the metrics in the different populations such that the MechaCar has more favorable values for any metric. This test is appropriate because their is a single continuous metric being assessed in each case.
+
+
 
